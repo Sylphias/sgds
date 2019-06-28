@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Brand from './Brand';
 
-class LearnReactApp extends Component {
+class MainNav extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -59,4 +59,4 @@ class LearnReactApp extends Component {
     }
 }
 
-export default LearnReactApp;
+export default MainNav;

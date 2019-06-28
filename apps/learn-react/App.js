@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import MainNav from './MainNav';
+import Dropdown from './Dropdown';
 
-class LearnReactApp extends Component {
+class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -33,11 +34,35 @@ class LearnReactApp extends Component {
                     },
                 ],
             },
+            dropdown: {
+                links: [
+                    {
+                        name: 'Who we are',
+                        link: '/who-we-are',
+                    },
+                    {
+                        name: 'What we do',
+                        link: '/what-we-do',
+                    },
+                    {
+                        name: 'Products',
+                        link: '/products',
+                        active: true
+                    },
+                    {
+                        divider: true
+                    },
+                    {
+                        name: 'Contact',
+                        link: '/contact',
+                    },
+                ],
+            },
         };
     }
     render() {
         return (
-            <div id="learn-react">
+            <div id="app">
                 <div className="sgds-masthead">
                     <div className="sgds-container">
                         <div className="row">
@@ -61,7 +86,17 @@ class LearnReactApp extends Component {
                 <section className="sgds-section">
                     <div className="sgds-container">
                         <h2>This is a React App</h2>
-                        <p>This page (aside from the footer below) was built with SGDS and React</p>
+                        <p>
+                            This page (aside from the footer below) was built
+                            with SGDS and React
+                        </p>
+                    </div>
+                </section>
+                <section className="sgds-section">
+                    <div className="sgds-container">
+                        <h3>Dropdowns</h3>
+                        <Dropdown name="Click me" links={this.state.dropdown.links}/>
+                        <Dropdown name="Hoverable" links={this.state.dropdown.links} hoverable={true}/>
                     </div>
                 </section>
             </div>
@@ -69,4 +104,4 @@ class LearnReactApp extends Component {
     }
 }
 
-export default LearnReactApp;
+export default App;
