@@ -50,16 +50,25 @@ sass:
 includes:
   # - contents/docs
 
-collections_dir: components
+collections_dir: collections
 collections:
-  standard:
+  component-standard:
     permalink: /docs/:path/
     output: true
-  layouts:
+  component-layouts:
     permalink: /docs/:path/
     output: true
-  general:
+  component-general:
     permalink: /docs/:path/
+    output: true
+  learn-design:
+    permalink: /ww/:path/
+    output: true
+  learn-development:
+    permalink: /ww/:path/
+    output: true
+  learn-writing:
+    permalink: /ww/:path/
     output: true
 
 exclude:

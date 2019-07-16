@@ -194,7 +194,6 @@ layout: layout-default
             <div class="col is-2 is-hidden-touch sidenav-container">
                 <div class="sidenav" data-topspacing="140" data-bottomspacing="40">
                     <aside class="sgds-menu sidebar__inner">
-
                         {% if page.url contains '/docs/' %}
                         <div class="control">
                             <input id="search-field" class="input is-rounded is-small" type="text" placeholder="Search Component">
@@ -202,11 +201,11 @@ layout: layout-default
                         <hr class="margin--top margin--bottom--sm">
                         <ul class="sgds-menu-list">
                             {% for collection in site.collections reversed %}
-                                {% if collection.label !='posts' %}
+                                {% if collection.directory contains 'component' %}
                                     {% assign name = collection.label %}
                                     <li class="second-level-nav">
                                         <a class="second-level-nav-header has-text-primary">
-                                            {{name | capitalize }}
+                                            {{name | replace:'component-','' | capitalize}}
                                             <i class="sgds-icon sgds-icon-chevron-up has-text-weight" aria-hidden="true"></i>
                                         </a>
                                     </li>
