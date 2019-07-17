@@ -52,24 +52,33 @@ includes:
 
 collections_dir: collections
 collections:
-  component-standard:
+  # - /docs/
+  docs-standard:
     permalink: /docs/:path/
     output: true
-  component-layouts:
+    category: docs
+  docs-layouts:
     permalink: /docs/:path/
     output: true
-  component-general:
+    category: docs
+  docs-general:
     permalink: /docs/:path/
     output: true
+    category: docs
+  # - /learn/
   learn-design:
-    permalink: /ww/:path/
+    permalink: /learn/design/:path/
     output: true
+    output: false
+    category: learn
   learn-development:
-    permalink: /ww/:path/
+    permalink: /learn/development/:path/
     output: true
+    category: learn
   learn-writing:
-    permalink: /ww/:path/
+    permalink: /learn/writing/:path/
     output: true
+    category: learn
 
 exclude:
   - .idea
