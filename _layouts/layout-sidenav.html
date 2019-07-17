@@ -104,25 +104,22 @@ layout: layout-default
                     <span class="sgds-icon sgds-icon-chevron-down"></span>
                 </span>
             </button>
+            
         </div>
         <div class="sgds-dropdown-menu" id="sgds-dropdown-menu" role="menu">
             <div class="sgds-dropdown-content padding">
-                {%- assign links = site.data.navigation -%}
-                {%- for link in links -%}
-                    {%- if link.title == 'Learn' -%}
-                        {%- for title in link.lvl2 -%}
-                            {% if page.url contains title.url %}
-                                {%- for title2 in title.lvl3 -%}
-                                    {%- assign class = nil -%}
-                                    {%- if page.url contains title2.url -%}
-                                    {%- assign class = 'is-hidden' -%}
-                                    {%- endif -%}
-                                    <a href="{{title2.url}}" class="sgds-dropdown-item {{class}} is-size-6">{{title2.title}}</a>
-                                {%- endfor -%}
+                {% for collection in site.collections %}
+                    {% if page.url contains collection.sub %}
+                        {% assign name = collection.label %}
+                        {% for item in site[name] %}
+                            {% assign class = nil %}
+                            {% if page.url contains item.url %}
+                                {% assign class = 'is-active has-text-weight-normal' %}
                             {% endif %}
-                        {%- endfor -%}
-                    {%- endif -%}
-                {%- endfor -%}
+                            <a href="{{item.url}}" class="sgds-dropdown-item {{class}} is-size-6">{{item.title}}</a>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>

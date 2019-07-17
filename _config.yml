@@ -69,16 +69,18 @@ collections:
   learn-design:
     permalink: /learn/design/:path/
     output: true
-    output: false
     category: learn
+    sub: design
   learn-development:
     permalink: /learn/development/:path/
     output: true
     category: learn
+    sub: development
   learn-writing:
     permalink: /learn/writing/:path/
     output: true
     category: learn
+    sub: writing
 
 exclude:
   - .idea
