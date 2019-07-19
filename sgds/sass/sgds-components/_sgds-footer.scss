@@ -5,7 +5,7 @@
     color:white;
   }
   .divider{
-    border-top:1px solid $grey-dark;
+    border-top:1px solid rgba(white, 0.3);
   }
   a {
     color: $footer-grey;
@@ -21,10 +21,14 @@
   }
   p{
     color: $footer-grey;
-    line-height: 25px !important;
+    line-height: 25px;
     & + p{
       margin-top:15px;
     }
+    
+  }
+  .footer-bottom p{
+    font-size: $size-menu;
   }
   ul{
     margin: 0;

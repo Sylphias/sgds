@@ -11,3 +11,11 @@ body {
 .sgds-footer {
     flex-shrink: 0;
 }
+
+a[target="_blank"]:after {
+    display: inline-block;
+    font-family: sgds-icons;
+    content: "";
+    padding-left: .25rem;
+    font-weight: 400;
+}
