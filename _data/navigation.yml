@@ -4,12 +4,11 @@
 - title: Learn
   url: /learn/
 
-- title: Docs
+- title: Docs 
   url: /docs/
 
-- title: FAQs
-  url: /general/faq/
-
+- title: FAQ
+  url: /faq/
 
 #- title: Testing
 #  url: /testing/
