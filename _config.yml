@@ -30,7 +30,6 @@ plugins:
   - jekyll-assets
   - jekyll-seo-tag
 
-<<<<<<< HEAD
 breadcrumbs:
   root:
     hide: false  # show breadcrumbs on root/home page
