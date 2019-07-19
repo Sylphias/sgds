@@ -19,3 +19,6 @@ a[target="_blank"]:after {
     padding-left: .25rem;
     font-weight: 400;
 }
+.sgds-masthead a:after{
+    content: "";
+}

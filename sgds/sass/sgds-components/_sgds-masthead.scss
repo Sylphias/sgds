@@ -27,44 +27,43 @@ $masthead-height: 1.875rem;
     color: $grey-dark;
     display:flex;
     align-items: center;
-  }
-  a:hover{
-    color: $primary;
-  }
-}
-
-.language_selector{
-  cursor: pointer;
-  align-items: center;
-  justify-content: flex-end;
-  &:after{
-    font-family: "sgds-icons";
-    content: "\e93c";
-    margin-left:5px;
-  }
-}
-
-.language_selector--dropdown{
-  display: none;
-  position: absolute;
-  padding:1rem;
-  background-color: #f0f0f4;
-  top: $masthead-height;
-  right: 30px;
-  @include touch(){
-    right: 0;
-  }
-  ul{
-    margin: 0;
-  }
-  li{
-    cursor: pointer;
-    text-align: right;
-    padding: 0.5rem;
-    list-style: none;
-    margin: 0;
     &:hover{
-      text-decoration: underline;
+      color: $black;
+    }
+  }
+
+  .language_selector{
+    cursor: pointer;
+    align-items: center;
+    justify-content: flex-end;
+    &:after{
+      font-family: "sgds-icons";
+      content: "\e93c";
+      margin-left:5px;
+    }
+    &--dropdown{
+      display: none;
+      position: absolute;
+      padding:1rem;
+      background-color: #f0f0f4;
+      top: $masthead-height;
+      right: 30px;
+      @include touch(){
+        right: 0;
+      }
+      ul{
+        margin: 0;
+      }
+      li{
+        cursor: pointer;
+        text-align: right;
+        padding: 0.5rem;
+        list-style: none;
+        margin: 0;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
     }
   }
 }
